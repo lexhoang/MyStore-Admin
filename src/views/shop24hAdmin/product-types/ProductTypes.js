@@ -96,7 +96,7 @@ const ProductTypes = () => {
 
   useEffect(() => {
     if (typeName == "") {
-      fetchAPI('http://localhost:8000/producttypes')
+      fetchAPI('https://my-store-nodejs-999.herokuapp.com/producttypes')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -107,7 +107,7 @@ const ProductTypes = () => {
           console.error(error.message)
         });
     } else {
-      fetchAPI(`http://localhost:8000/producttypes?name=${typeName}`)
+      fetchAPI(`https://my-store-nodejs-999.herokuapp.com/producttypes?name=${typeName}`)
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 

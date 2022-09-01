@@ -19,7 +19,7 @@ function ModalDelete({ openModalDelete, idDelete, nameDelete, handleCloseDelete,
     const onBtnConfirmDeleteClick = () => {
         console.log("%cXác nhận xóa được click!", "color:red");
 
-        fetch("http://localhost:8000/producttypes/" + idDelete, { method: 'DELETE' })
+        fetch("https://my-store-nodejs-999.herokuapp.com/producttypes/" + idDelete, { method: 'DELETE' })
             // .then(async response => {
             //     const isJson = response.headers.get('content-type')?.includes('application/json');
             //     const data = isJson && await response.json();
