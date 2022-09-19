@@ -237,7 +237,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                             <label>Tổng tiền:</label>
                                         </Grid>
                                         <Grid item xs={9}>
-                                            <CFormInput readOnly fullWidth value={cost + " VNĐ"} Placeholder="cost" className="bg-white"
+                                            <CFormInput readOnly fullWidth value={"$" + cost} Placeholder="cost" className="bg-white"
                                                 size="small" onChange={(event) => setCost(event.target.value)} />
                                         </Grid>
                                     </Grid>
