@@ -302,7 +302,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                                                 <Grid item xs={1}></Grid>
 
                                                                 <Grid item xs={4} mt={1}>
-                                                                    <TextField readOnly variant="standard" value={(orderDetail[i].price) + " VNĐ"}
+                                                                    <TextField readOnly variant="standard" value={"$" + (orderDetail[i].price)}
                                                                         className="bg-white" size="small"
                                                                     />
                                                                 </Grid>

@@ -212,8 +212,8 @@ const Products = () => {
                       </CTableDataCell>
                       <CTableDataCell>{product.name}</CTableDataCell>
                       <CTableDataCell>{product.type.name}</CTableDataCell>
-                      <CTableDataCell>{numberWithCommas(product.buyPrice)}đ</CTableDataCell>
-                      <CTableDataCell>{numberWithCommas(product.promotionPrice)} VNĐ</CTableDataCell>
+                      <CTableDataCell>${numberWithCommas(product.buyPrice)}</CTableDataCell>
+                      <CTableDataCell>${numberWithCommas(product.promotionPrice)}</CTableDataCell>
                       <CTableDataCell>{product.amount}</CTableDataCell>
                       <CTableDataCell>
                         <ButtonGroup variant="contained">

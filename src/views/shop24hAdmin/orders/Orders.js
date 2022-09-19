@@ -223,7 +223,7 @@ const Orders = () => {
                         })
                         }
                       </CTableDataCell>
-                      <CTableDataCell>{orders.cost} VNĐ</CTableDataCell>
+                      <CTableDataCell>${orders.cost}</CTableDataCell>
                       <CTableDataCell>
                         <ButtonGroup variant="contained">
                           <Button color="info" className="text-white" value={index} onClick={() => { onBtnEditClick(orders) }}>EDIT</Button>

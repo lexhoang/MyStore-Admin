@@ -384,7 +384,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
                                                         <Grid item xs={1}></Grid>
 
                                                         <Grid item xs={5} mt={1}>
-                                                            <TextField disabled variant="standard" value={(numberWithCommas(orderDetail[i].price) + " VNĐ")}
+                                                            <TextField disabled variant="standard" value={"$" + (numberWithCommas(orderDetail[i].price))}
                                                                 className="bg-white" size="small"
                                                             />
                                                         </Grid>
