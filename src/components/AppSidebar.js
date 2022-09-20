@@ -9,7 +9,7 @@ import { AppSidebarNav } from './AppSidebarNav'
 import { logoNegative } from 'src/assets/brand/logo-negative'
 import { sygnet } from 'src/assets/brand/sygnet'
 
-import logoVape from '../assets/images/avatars/logo-vape.jpg'
+import logo from '../assets/images/avatars/logo.png'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
@@ -32,7 +32,7 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <img src={logoVape} width="100"></img>
+        <img src={logo} width="100"></img>
         {/* <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} /> */}
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
       </CSidebarBrand>
