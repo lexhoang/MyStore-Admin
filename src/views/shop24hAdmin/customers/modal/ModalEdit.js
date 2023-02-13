@@ -43,7 +43,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, idEdit, fetchAPI, setVarRef
                 },
             }
 
-            fetchAPI('https://my-store-nodejs-999.herokuapp.com/customers/' + idEdit, body)
+            fetchAPI('http://localhost:8000/customers/' + idEdit, body)
                 .then((data) => {
                     console.log(data);
                     setOpenAlert(true);

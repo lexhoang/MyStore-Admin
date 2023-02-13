@@ -34,7 +34,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }
-            fetchAPI('https://my-store-nodejs-999.herokuapp.com/producttypes', body)
+            fetchAPI('http://localhost:8000/producttypes', body)
                 .then((data) => {
                     setOpenAlert(true);
                     setStatusModal("success")

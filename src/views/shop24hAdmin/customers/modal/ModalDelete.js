@@ -19,7 +19,7 @@ function ModalDelete({ openModalDelete, idDelete, nameDelete, handleCloseDelete,
     const onBtnConfirmDeleteClick = () => {
         console.log("%cXác nhận xóa được click!", "color:red");
 
-        fetch("https://my-store-nodejs-999.herokuapp.com/customers/" + idDelete, { method: 'DELETE' })
+        fetch("http://localhost:8000/customers/" + idDelete, { method: 'DELETE' })
             .then((data) => {
                 console.log('Delete successful');
                 setOpenAlert(true)

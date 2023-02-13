@@ -35,7 +35,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetchAPI('https://my-store-nodejs-999.herokuapp.com/products')
+        fetchAPI('http://localhost:8000/products')
             .then((data) => {
                 setProducts(data.data)
                 console.log(data.data)
@@ -62,7 +62,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }
-            fetchAPI('https://my-store-nodejs-999.herokuapp.com/orders/' + idEdit, body)
+            fetchAPI('http://localhost:8000/orders/' + idEdit, body)
                 .then((data) => {
                     console.log(data);
                     setOpenAlert(true);
@@ -313,7 +313,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
 
                                                 <Grid item xs={1} ml={3}>
                                                     <button className="bg-danger">
-                                                        <CIcon icon={cilTrash} onClick={() => onBtnDeleteClick(i)} />
+                                                        <CIcon icon={cilTrash} onClick={() => onBtnDeleteClick(i)} style={{ color: 'white' }} />
                                                     </button>
                                                 </Grid>
                                             </Grid>

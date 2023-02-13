@@ -32,7 +32,7 @@ function ModalEdit({ openModalEdit, typeEdit, handleCloseEdit, idEdit, fetchAPI,
     const [productTypes, setProductTypes] = useState([])
 
     useEffect(() => {
-        fetchAPI('https://my-store-nodejs-999.herokuapp.com/producttypes')
+        fetchAPI('http://localhost:8000/producttypes')
             .then((data) => {
                 setProductTypes(data.data)
                 console.log(data.data)
@@ -63,7 +63,7 @@ function ModalEdit({ openModalEdit, typeEdit, handleCloseEdit, idEdit, fetchAPI,
                 },
             }
 
-            fetchAPI('https://my-store-nodejs-999.herokuapp.com/products/' + idEdit, body)
+            fetchAPI('http://localhost:8000/products/' + idEdit, body)
                 .then((data) => {
                     console.log(data);
                     setOpenAlert(true);

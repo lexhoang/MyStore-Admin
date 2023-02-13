@@ -101,7 +101,7 @@ const Orders = () => {
 
   useEffect(() => {
     if (filter == "") {
-      fetchAPI('https://my-store-nodejs-999.herokuapp.com/orders')
+      fetchAPI('http://localhost:8000/orders')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -121,7 +121,7 @@ const Orders = () => {
   }, [filter, page, limit, varRefeshPage])
 
   useEffect(() => {
-    fetchAPI('https://my-store-nodejs-999.herokuapp.com/products')
+    fetchAPI('http://localhost:8000/products')
       .then((data) => {
         setProducts(data.data)
       })
@@ -131,7 +131,7 @@ const Orders = () => {
   }, [])
 
   useEffect(() => {
-    fetchAPI('https://my-store-nodejs-999.herokuapp.com/customers')
+    fetchAPI('http://localhost:8000/customers')
       .then((data) => {
         setCustomers(data.data)
         console.log(data)

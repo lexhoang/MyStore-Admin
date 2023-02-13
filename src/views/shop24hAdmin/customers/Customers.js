@@ -106,7 +106,7 @@ const Customers = () => {
 
   useEffect(() => {
     if (customerPhone == "") {
-      fetchAPI('https://my-store-nodejs-999.herokuapp.com/customers')
+      fetchAPI('http://localhost:8000/customers')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -117,7 +117,7 @@ const Customers = () => {
           console.log(error.message)
         })
     } else {
-      fetchAPI(`https://my-store-nodejs-999.herokuapp.com/customers?phone=${customerPhone}`)
+      fetchAPI(`http://localhost:8000/customers?phone=${customerPhone}`)
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -131,7 +131,7 @@ const Customers = () => {
   }, [customerPhone, page, limit, varRefeshPage])
 
   useEffect(() => {
-    fetchAPI('https://my-store-nodejs-999.herokuapp.com/orders')
+    fetchAPI('http://localhost:8000/orders')
       .then((data) => {
         setOrders(data.data)
         console.log(data)

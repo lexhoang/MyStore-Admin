@@ -38,7 +38,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetchAPI('https://my-store-nodejs-999.herokuapp.com/products')
+        fetchAPI('http://localhost:8000/products')
             .then((data) => {
                 setProducts(data.data)
                 console.log(data.data)
@@ -89,7 +89,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }
-            fetchAPI("https://my-store-nodejs-999.herokuapp.com/customers/phone/", body)
+            fetchAPI("http://localhost:8000/customers/phone/", body)
                 .then((data) => {
                     setOpenAlert(true);
                     setStatusModal("success")
