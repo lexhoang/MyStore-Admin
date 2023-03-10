@@ -264,11 +264,11 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                                                 <Grid item sm={8}>
                                                                     <FormControl fullWidth size="small">
                                                                         <Select
-                                                                            value={orderDetail[i].product}
+                                                                            value={orderDetail[i].id}
                                                                             label="Product"
                                                                             onChange={(event) => {
-                                                                                orderDetail[i].product = event.target.value
-                                                                                orderDetail[i].price = getPrice(orderDetail[i].product) * parseInt(orderDetail[i].quantity)
+                                                                                orderDetail[i].id = event.target.value
+                                                                                orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].count)
                                                                                 setOrderDetail([...orderDetail])
                                                                             }}>
                                                                             <MenuItem value={"NOT"}>Chọn Sản Phẩm</MenuItem>
@@ -289,11 +289,11 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                                             <Grid container>
                                                                 <Grid item xs={4}>Số lượng</Grid>
                                                                 <Grid item xs={2}>
-                                                                    <CFormInput type="number" value={orderDetail[i].quantity}
+                                                                    <CFormInput type="number" value={orderDetail[i].count}
                                                                         className="bg-white" size="small"
                                                                         onChange={(event) => {
-                                                                            orderDetail[i].quantity = event.target.value;
-                                                                            orderDetail[i].price = getPrice(orderDetail[i].product) * parseInt(orderDetail[i].quantity)
+                                                                            orderDetail[i].count = event.target.value;
+                                                                            orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].count)
                                                                             setOrderDetail([...orderDetail])
                                                                             console.log(orderDetail)
                                                                         }} />

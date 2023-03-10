@@ -214,9 +214,10 @@ const Orders = () => {
                         {orders.orderDetail.map((value, index) => {
                           return (
                             <div key={index}>
-                              <p>{products.filter((product, index) => product._id === value.product)[0] ? products.filter((product, index) => product._id === value.product)[0].name : null}</p>
-                              {/* <p>{"Sản phẩm: " + value.info.name}</p> */}
-                              <p>{"Số lượng: " + value.quantity}</p>
+                              <p>{products.filter((product, index) => product._id === value.id)[0] ?
+                                products.filter((product, index) => product._id === value.id)[0].name : null}
+                              </p>
+                              <p>{"Số lượng: " + value.count}</p>
                               <br></br>
                             </div>
                           )
