@@ -38,7 +38,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetchAPI('http://localhost:8000/products')
+        fetchAPI('https://my-store-node-js.vercel.app/products')
             .then((data) => {
                 setProducts(data.data)
                 console.log(data.data)
@@ -89,7 +89,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }
-            fetchAPI("http://localhost:8000/customers/phone/", body)
+            fetchAPI("https://my-store-node-js.vercel.app/customers/phone/", body)
                 .then((data) => {
                     setOpenAlert(true);
                     setStatusModal("success")

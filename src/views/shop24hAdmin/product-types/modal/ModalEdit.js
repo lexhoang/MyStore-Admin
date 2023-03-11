@@ -35,7 +35,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, idEdit, fetchAPI, setVarRef
                 },
             }
 
-            fetchAPI('http://localhost:8000/producttypes/' + idEdit, body)
+            fetchAPI('https://my-store-node-js.vercel.app/producttypes/' + idEdit, body)
                 .then((data) => {
                     console.log(data);
                     setOpenAlert(true);

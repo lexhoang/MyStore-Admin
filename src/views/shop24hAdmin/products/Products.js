@@ -96,7 +96,7 @@ const Products = () => {
 
   useEffect(() => {
     if (nameProduct == "") {
-      fetchAPI('http://localhost:8000/products')
+      fetchAPI('https://my-store-node-js.vercel.app/products')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -107,7 +107,7 @@ const Products = () => {
           console.error(error.message)
         });
     } else {
-      fetchAPI(`http://localhost:8000/products?name=${nameProduct}`)
+      fetchAPI(`https://my-store-node-js.vercel.app/products?name=${nameProduct}`)
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -128,7 +128,7 @@ const Products = () => {
   // const [productTypes, setProductTypes] = useState([]);
 
   // useEffect(() => {
-  //   fetchAPI('http://localhost:8000/producttypes')
+  //   fetchAPI('https://my-store-node-js.vercel.app/producttypes')
   //     .then((data) => {
   //       setProductTypes(data.data)
   //       console.log(data)

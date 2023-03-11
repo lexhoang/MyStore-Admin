@@ -32,7 +32,7 @@ function ModalEdit({ openModalEdit, typeEdit, handleCloseEdit, idEdit, fetchAPI,
     const [productTypes, setProductTypes] = useState([])
 
     useEffect(() => {
-        fetchAPI('http://localhost:8000/producttypes')
+        fetchAPI('https://my-store-node-js.vercel.app/producttypes')
             .then((data) => {
                 setProductTypes(data.data)
                 console.log(data.data)
@@ -63,7 +63,7 @@ function ModalEdit({ openModalEdit, typeEdit, handleCloseEdit, idEdit, fetchAPI,
                 },
             }
 
-            fetchAPI('http://localhost:8000/products/' + idEdit, body)
+            fetchAPI('https://my-store-node-js.vercel.app/products/' + idEdit, body)
                 .then((data) => {
                     console.log(data);
                     setOpenAlert(true);

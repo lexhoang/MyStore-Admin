@@ -101,7 +101,7 @@ const Orders = () => {
 
   useEffect(() => {
     if (filter == "") {
-      fetchAPI('http://localhost:8000/orders')
+      fetchAPI('https://my-store-node-js.vercel.app/orders')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -121,7 +121,7 @@ const Orders = () => {
   }, [filter, page, limit, varRefeshPage])
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/products')
+    fetchAPI('https://my-store-node-js.vercel.app/products')
       .then((data) => {
         setProducts(data.data)
       })
@@ -131,7 +131,7 @@ const Orders = () => {
   }, [])
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/customers')
+    fetchAPI('https://my-store-node-js.vercel.app/customers')
       .then((data) => {
         setCustomers(data.data)
         console.log(data)

@@ -106,7 +106,7 @@ const Customers = () => {
 
   useEffect(() => {
     if (customerPhone == "") {
-      fetchAPI('http://localhost:8000/customers')
+      fetchAPI('https://my-store-node-js.vercel.app/customers')
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -117,7 +117,7 @@ const Customers = () => {
           console.log(error.message)
         })
     } else {
-      fetchAPI(`http://localhost:8000/customers?phone=${customerPhone}`)
+      fetchAPI(`https://my-store-node-js.vercel.app/customers?phone=${customerPhone}`)
         .then((data) => {
           setNoPage(Math.ceil(data.data.length / limit));
 
@@ -131,7 +131,7 @@ const Customers = () => {
   }, [customerPhone, page, limit, varRefeshPage])
 
   useEffect(() => {
-    fetchAPI('http://localhost:8000/orders')
+    fetchAPI('https://my-store-node-js.vercel.app/orders')
       .then((data) => {
         setOrders(data.data)
         console.log(data)

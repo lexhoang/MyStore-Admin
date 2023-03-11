@@ -21,7 +21,7 @@ function ModalDelete({ openModalDelete, idDelete, idCustomer, handleCloseDelete,
     const onBtnConfirmDeleteClick = () => {
         console.log("%cXác nhận xóa được click!", "color:red");
 
-        fetch("http://localhost:8000/customers/" + idCustomer + "/orders/" + idDelete, { method: 'DELETE' })
+        fetch("https://my-store-node-js.vercel.app/customers/" + idCustomer + "/orders/" + idDelete, { method: 'DELETE' })
             .then((data) => {
                 console.log('Delete successful');
                 setOpenAlert(true)

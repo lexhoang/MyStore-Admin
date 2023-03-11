@@ -34,7 +34,7 @@ function ModalAddNew({ openModalAdd, setOpenModalAdd, handleClose, fetchAPI, set
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }
-            fetchAPI('http://localhost:8000/producttypes', body)
+            fetchAPI('https://my-store-node-js.vercel.app/producttypes', body)
                 .then((data) => {
                     setOpenAlert(true);
                     setStatusModal("success")
