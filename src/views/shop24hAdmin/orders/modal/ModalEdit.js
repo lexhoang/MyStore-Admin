@@ -268,7 +268,7 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                                                             label="Product"
                                                                             onChange={(event) => {
                                                                                 orderDetail[i].id = event.target.value
-                                                                                orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].count)
+                                                                                orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].quantity)
                                                                                 setOrderDetail([...orderDetail])
                                                                             }}>
                                                                             <MenuItem value={"NOT"}>Chọn Sản Phẩm</MenuItem>
@@ -289,11 +289,11 @@ function ModalEdit({ openModalEdit, handleCloseEdit, orderDetailEdit, idEdit, sh
                                                             <Grid container>
                                                                 <Grid item xs={4}>Số lượng</Grid>
                                                                 <Grid item xs={2}>
-                                                                    <CFormInput type="number" value={orderDetail[i].count}
+                                                                    <CFormInput type="number" value={orderDetail[i].quantity}
                                                                         className="bg-white" size="small"
                                                                         onChange={(event) => {
-                                                                            orderDetail[i].count = event.target.value;
-                                                                            orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].count)
+                                                                            orderDetail[i].quantity = event.target.value;
+                                                                            orderDetail[i].price = getPrice(orderDetail[i].id) * parseInt(orderDetail[i].quantity)
                                                                             setOrderDetail([...orderDetail])
                                                                             console.log(orderDetail)
                                                                         }} />
