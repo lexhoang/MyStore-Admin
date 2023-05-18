@@ -217,7 +217,7 @@ const Orders = () => {
                               <p>{products.filter((product, index) => product._id === value.id)[0] ?
                                 products.filter((product, index) => product._id === value.id)[0].name : null}
                               </p>
-                              <p>{"Số lượng: " + value.count}</p>
+                              <p>{"Số lượng: " + value.quantity}</p>
                               <br></br>
                             </div>
                           )
